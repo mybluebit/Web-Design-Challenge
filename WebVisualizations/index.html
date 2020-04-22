@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-------------------*HEAD*------------------------->
+  <head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Visualization Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="resources/styles.css">
+  </head>
+
+  <!-------------------*Body*------------------------->
+  <body>
+      
+    <!-------------------*Navbar contents*------------------------->
+
+      <div class="row Header">
+        <div class="col-xs-12" style="width:100%;">        
+          <nav class="navbar navbar-expand-md navbar-light">
+            <!-- Linkable Latitude to the landing page -->
+            <a href="index.html" class="navbar-brand mb-0 h1 title" style="color: #fff;">Latitude</a>
+
+            <!-- Creating Navbar and Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>       
+            <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
+              <ul class="navbar-nav">
+                <!-- Creating DropDown -->
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Plots</a>
+                  <!-- Creating DropDown Items with Linkable pages-->
+                  <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="max_temperature.html">Max Temperature</a>
+                    <a class="dropdown-item" href="humidity.html">Humidity</a>
+                    <a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
+                    <a class="dropdown-item" href="wind_speed.html">Wind Speed</a>
+                  </div>         
+                </li>
+                  <!-- Creating rest of menu with Linkable pages-->
+                <li class="nav-item">
+                  <a class="nav-link" href="comparison.html">Comparison</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="data.html">Data</a>
+                </li>
+              </ul>
+                          
+            </div>
+          </nav>
+        </div>
+      </div>
+      <br><br>
+    <!-------------*Landing Page Contents*-----------> 
+    <div class="container">  
+      <div class="row Content">
+        <!-------------*Main content*-----------> 
+        <div class="Main_Content col-md-8">
+          <section id="main-box" style="background: white;">
+            <section id="figure">
+              <h1 >Summary: Latitude vs. X</h1>
+              <hr>
+              <br>
+              <img id="summary-image" src="resources/assets/images/Fig1.png" alt="Summary">
+            </section>
+            <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.</p>
+            <br>
+            <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
+          </section>
+          
+        </div>
+
+        <!-------------*Sidebar content*-----------> 
+        <div class="Sidebar col-md-4">
+          <br class="off">
+          <section id="main-box">
+            <h2 >&nbsp;&nbsp;Visualizations</h2>
+            <hr>
+            <br>
+            <a href= "max_temperature.html" ><img src="resources/assets/images/Fig1.png" width="48%" class="reimage"></a>
+            <a href= "humidity.html" ><img src="resources/assets/images/Fig2.png" width="48%" class="reimage"></a>
+            <a href= "cloudiness.html" ><img src="resources/assets/images/Fig3.png" width="48%" class="reimage"></a>
+            <a href= "wind_speed.html" ><img src="resources/assets/images/Fig4.png" width="48%" class="reimage"></a>
+          </section>
+        </div>
+
+      </div>
+                
+    </div>
+
+
+
+
+   
+    <!-------------------*Footer*------------------------->
+    <br><br><br><br>
+    <div class="row Footer">
+      <section class="Footer_Content col-xs-12 Copy_Right" >
+        <span >© Copyright Coding Bootcamp 2017</span>
+      </section>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  </body>
+</html>
